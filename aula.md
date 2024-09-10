@@ -140,7 +140,13 @@ const start = () => {
 start()
 
 
-
 # Modulos/pacotes/dependencias
 
+Importação de módulos utilizando o NPM: npm install "nomeModulo"
+Biblioteca inquirer para criação de prompts interativos: npm install inquirer
 
+
+# Programação async e promessas
+
+Uso de funções assíncronas (async/await)
+    
