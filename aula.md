@@ -47,8 +47,9 @@ console.log(`Ola, ${variavel}`);
 
 # Operadores:
 
-Operador de atribuição de valor
-Operador de concatenação
+Operador de atribuição de valor: =
+Operador de concatenação: +
+Operador de comparação: == != <= >= < >
 
 # Estruturas de dados:
 
@@ -138,6 +139,11 @@ const start = () => {
 }
 
 start()
+
+(
+    *if*
+)
+
 
 
 # Modulos/pacotes/dependencias
