@@ -75,13 +75,42 @@ Acesso a propriedades de objetos
 # 
 # console.log(meta.type);
 
+// Objeto
+
+let meta = {
+    value: "ler um livro",
+    checked: false,
+}
+let metas = [
+    meta,
+    {
+        value: "Treinar 30m todos os dias",
+        checked: false
+    }
+]
+console.log(`Valor da meta 1: ${metas[0].value}`);
+
  Método é tudo aquilo que esta dentro de um objeto, enquanto uma função é utilizada fora do objeto;
 
-                 Function e Arrow function
+#                 Function e Arrow function
 
-#            Named Function
-#                    function criarMeta() {}
+    Named Function
+        function criarMeta() {}
 
 
-#           Arrow function
-#                   const criarMeta = () => {}
+    Arrow function
+        const criarMeta = () => {}
+
+
+# Estrutura de repetição
+
+const start = () => {
+    let Count = 0;
+
+while (Count < 10 ) {
+        console.log(Count)
+        Count = Count + 1
+    }
+}
+
+start()

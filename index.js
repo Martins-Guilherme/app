@@ -1,21 +1,10 @@
-// Array e objetos
+const start = () => {
+    let Count = 0;
 
-// #ARRAYS
-// let metas = ["mike", "aló"];
-// console.log(metas[1] + ", " + metas[0]);
-
-
-// Objeto
-
-let meta = {
-    value: "ler um livro",
-    checked: false,
-}
-let metas = [
-    meta,
-    {
-        value: "Treinar 30m todos os dias",
-        checked: false
+while (Count < 10 ) {
+        console.log(Count)
+        Count = Count + 1
     }
-]
-console.log(`Valor da meta 1: ${metas[0].value}`);
+}
+
+start()
