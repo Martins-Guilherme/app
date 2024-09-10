@@ -29,10 +29,6 @@ Variáveis globais e locais
 Constantes
 
 
-# Operador:
-
-Operador de atribuição de valor:  =
-
 # Tipos de dados:
 
 String: "", '' ou ``;
@@ -43,7 +39,49 @@ boolean: true ou false
 # Escopo:
 
 let variavel = "Guilherme";
-console.log(`Ola,${variavel}`)
+console.log(`Ola, ${variavel}`);
 {
-    var = "a";    
+    let variavel = "Gustavo";
+    console.log(`Olá, ${variavel}`);
 }
+
+# Operadores:
+
+Operador de atribuição de valor
+Operador de concatenação
+
+# Estruturas de dados:
+
+# Array:
+    *uma lista que contem qualquer tipo de dado*
+##          let metas = ["mike", "aló"];
+##          console.log(metas[1] + ", " + metas[0]);
+
+# Objetos:
+
+Atribuição e métodos
+Criação e manipulação de objetos
+Acesso a propriedades de objetos
+
+# let meta = {
+#     value: "ler um livro",
+#     checked: false,
+#     type: [
+#         "Ação",
+#         "Ficção",
+#         "Terror"
+#     ]    
+# }
+# 
+# console.log(meta.type);
+
+ Método é tudo aquilo que esta dentro de um objeto, enquanto uma função é utilizada fora do objeto;
+
+                 Function e Arrow function
+
+#            Named Function
+#                    function criarMeta() {}
+
+
+#           Arrow function
+#                   const criarMeta = () => {}
