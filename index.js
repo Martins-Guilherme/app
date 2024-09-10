@@ -7,21 +7,15 @@
 
 // Objeto
 
-// let meta = {
-//     value: "ler um livro",
-//     checked: false,
-//     type: [
-//         "Ação",
-//         "Ficção",
-//         "Terror"
-//     ]    
-// }
-
-// console.log(meta.type);
-
-//  Function |
-function criarMeta() {
+let meta = {
+    value: "ler um livro",
+    checked: false,
 }
-// | Arrow function
-const criarMeta = () => {
-}
+let metas = [
+    meta,
+    {
+        value: "Treinar 30m todos os dias",
+        checked: false
+    }
+]
+console.log(`Valor da meta 1: ${metas[0].value}`);
