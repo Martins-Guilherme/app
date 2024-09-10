@@ -21,3 +21,29 @@ Como um LEGO, você ira utilizar peças para criar algoritmos, ou seja, para res
 Coletar dados
 Processar os dados (manipular, alterar...)
 Apresentar os dados
+
+
+# Escopo e variáveis:
+
+Variáveis globais e locais
+Constantes
+
+
+# Operador:
+
+Operador de atribuição de valor:  =
+
+# Tipos de dados:
+
+String: "", '' ou ``;
+number: 2, 1, 1.5...
+boolean: true ou false
+
+
+# Escopo:
+
+let variavel = "Guilherme";
+console.log(`Ola,${variavel}`)
+{
+    var = "a";    
+}
