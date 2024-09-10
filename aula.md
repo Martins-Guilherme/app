@@ -120,13 +120,27 @@ start()
 
     *switch*
 
-switch(opcao){
-    case("str1"):
-        comando
-        break
-    case("str2"):
-        comando 2
-        break
-    case("sair"):
-        return
+const start = () => {
+    while (true) {
+        let opcao =  "cadastrar"
+        switch(opcao){
+            case "cadastrar":
+                console.log("Vamos cadastrar.")
+                break
+            case "Listar":
+                console.log("Vamos listar.")
+                break
+            case "sair":
+                break
+        }
+    return
+    }
 }
+
+start()
+
+
+
+# Modulos/pacotes/dependencias
+
+
