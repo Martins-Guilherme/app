@@ -104,6 +104,8 @@ console.log(`Valor da meta 1: ${metas[0].value}`);
 
 # Estrutura de repetição
 
+        *while*
+
 const start = () => {
     let Count = 0;
 
@@ -112,5 +114,19 @@ while (Count < 10 ) {
         Count = Count + 1
     }
 }
-
 start()
+
+# estrutura condicionais:
+
+    *switch*
+
+switch(opcao){
+    case("str1"):
+        comando
+        break
+    case("str2"):
+        comando 2
+        break
+    case("sair"):
+        return
+}
