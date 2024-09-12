@@ -1,7 +1,7 @@
 const { select, input, checkbox } = require ('@inquirer/prompts')
 const { textSync } = require ('figlet')
 
-let mensagem = "Bem vindo ao app de metas"
+let mensagem = "Bem vindo ao app > "
 
 
 let meta = {
@@ -25,6 +25,11 @@ const cadastrarMeta = async () => {
 }
 
 const listarMetas = async () => {
+    
+    if (metas.length == 0) {
+        return
+    }
+    
     const resposta = await checkbox({
         message: "Use as setas para mudar de meta, o espaço para marcar e desmarcar, enter para finalizar a etapa:",
         choices: [...metas],
@@ -120,10 +125,8 @@ const deletarMetas = async () =>{
             return meta.value != item
         })
     })
-
-
+    
     console.log('Meta(s) deletada(s) com sucesso!')
-
 }
 
 const mostrarMensagem = () =>{
@@ -145,7 +148,7 @@ const start = async () => {
 
 // MENU APLICATIVO COM AS OPÇÕES DE EXECUÇÃO:
         const opcao = await select({
-            message: "Menu >",
+            message: "Menu > ",
             choices: [
                 {
                     name: "Cadastrar meta",
@@ -197,6 +200,7 @@ const start = async () => {
                 break
             console.log('');
             case "sair":
+                mostrarMensagem()
                 console.log("Ate a proxima.")
                 return
         
