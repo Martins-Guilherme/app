@@ -58,12 +58,12 @@ Rest operator: ?????????
 
     *uma lista que contem qualquer tipo de dado*
     Método de array: 
-    push    =   
+    push    =   adicionar um item a array
     [
-
-        find   =
-        forEach =
-        filter  =
+        map     =   busca um item dentro da array
+        find    =   procurar um item dentra da array
+        forEach =   percorre toda a array
+        filter  =   filtar um item dentro da array
     ] = HOF (higher Order Function) => Função de ordem superior
 
 
