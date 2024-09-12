@@ -50,11 +50,23 @@ console.log(`Ola, ${variavel}`);
 Operador de atribuição de valor: =
 Operador de concatenação: +
 Operador de comparação: == != <= >= < >
-
+Spread operator: [...]
+Rest operator: ?????????
 # Estruturas de dados:
 
 # Array:
+
     *uma lista que contem qualquer tipo de dado*
+    Método de array: 
+    push    =   
+    [
+
+        find   =
+        forEach =
+        filter  =
+    ] = HOF (higher Order Function) => Função de ordem superior
+
+
 ##          let metas = ["mike", "aló"];
 ##          console.log(metas[1] + ", " + metas[0]);
 
@@ -76,7 +88,7 @@ Acesso a propriedades de objetos
 # 
 # console.log(meta.type);
 
-// Objeto
+EXEMPLO objeto
 
 let meta = {
     value: "ler um livro",
