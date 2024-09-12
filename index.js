@@ -1,6 +1,9 @@
 const { select, input, checkbox } = require ('@inquirer/prompts')
 const { textSync } = require ('figlet')
 
+let mensagem = "Bem vindo ao app de metas"
+
+
 let meta = {
     value: "tomar 3l de água por dia",
     checked: false
@@ -18,7 +21,7 @@ const cadastrarMeta = async () => {
         value: meta,
         checked: false
     })
-
+    mensagem = "Meta cadastrada com sucesso!"
 }
 
 const listarMetas = async () => {
@@ -123,10 +126,22 @@ const deletarMetas = async () =>{
 
 }
 
+const mostrarMensagem = () =>{
+    console.clear()
+
+    if (mensagem != '') {
+        console.log(mensagem)
+        console.log('')
+        mensagem = ''
+    }
+}
+
+
 const start = async () => {
     while (true) {
+        mostrarMensagem()
         // github.com/patorjk/figlet.js
-        console.log(textSync("To do list", {font: "Thorned",horizontalLayout: "default",verticalLayout: "default",width: 80,whitespaceBreak: true,}));
+        console.log(textSync("To do list", {font: "Red Phoenix",horizontalLayout: "default",verticalLayout: "default",width: 80,whitespaceBreak: true,}));
 
 // MENU APLICATIVO COM AS OPÇÕES DE EXECUÇÃO:
         const opcao = await select({
@@ -161,11 +176,11 @@ const start = async () => {
 
 // ESCOLHAS PARA ACESSAR FUNÇÃO DENTRO DO APLICATIVO:
 //  CADASTRO DE METAS, LISTA DE METAS, METAS REALIZADAS,
-//  METAS ABERTAS E CASO QUEIRA SAIR DO APLICATIVO:
+//  METAS ABERTAS, METAS PARA E CASO QUEIRA SAIR DO APLICATIVO:
         switch(opcao){
             case "cadastrar":
                 await cadastrarMeta()
-                console.log(metas)
+                // console.log(metas) informar as metas
                 break
             case "listar":
                 await listarMetas()
