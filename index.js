@@ -58,11 +58,13 @@ const metasRealizadas = async () => {
     }
     
     await select({
-        message: "Metas realizadas " + realizadas.length,
+        message: "Metas realizadas: " + realizadas.length,
         choices: [...realizadas]
     })
 }
 
+
+    /*  água [] - caminhar [] - cantar [x] */
 const metasAbertas = async () =>{
     const abertas = metas.filter((meta) =>{
         return meta.checked != true     // ou !meta.checked resulta o mesmo objetivo. Se verdadeiro é transforma em falso.
@@ -74,7 +76,7 @@ const metasAbertas = async () =>{
     }
 
     await select({
-        message: "Metas abertas " + abertas.length,
+        message: "Metas abertas: " + abertas.length,
         choices:[
             ...abertas
         ]
@@ -84,19 +86,42 @@ const metasAbertas = async () =>{
 
 const deletarMetas = async () =>{
 
-    // const metasDesmarcadas = metas.map((meta) => PÇAO
-    //     meta.checked = false
-    //     return meta
-    // })
+    /* 
+        const metasDesmarcadas = metas.map((meta) => OPÇÃO
+            meta.checked = false
+            return meta
+        })
+    
+    */
+    
+    const metasDesmarcadas = metas.map((meta) => {
+        return {
+            value: meta.value,
+            checked: false
+            }
+    })
 
-    const resposta = await checkbox({
+    const itensADeletar = await checkbox({
         message: "Selecione item para deletar",
-        choices: [...metas],
+        choices: [...metasDesmarcadas],
         instructions: false,    // Configurado para "false", não informa as instruções em inglês, "true" informa as instruções.
     })
 
-    console.log('respostas ' + resposta);
-};
+    if (itensADeletar.length == 0) {
+        console.log('Nenhum item para deletar! :)')
+        return
+    }
+    
+    itensADeletar.forEach((item) => {
+        metas = metas.filter((meta)=>{
+            return meta.value != item
+        })
+    })
+
+
+    console.log('Meta(s) deletada(s) com sucesso!')
+
+}
 
 const start = async () => {
     while (true) {
