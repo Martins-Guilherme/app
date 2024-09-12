@@ -58,10 +58,30 @@ const metasRealizadas = async () => {
     }
     
     await select({
-        message: "Metas realizadas ",
+        message: "Metas realizadas " + realizadas.length,
         choices: [...realizadas]
     })
 }
+
+const metasAbertas = async () =>{
+    const abertas = metas.filter((meta) =>{
+        return meta.checked != true     // ou !meta.checked resulta o mesmo objetivo. Se verdadeiro é transforma em falso.
+    })
+
+    if (abertas.length == 0) {
+        console.log('Não existem metas abertas! :)');        
+        return
+    }
+
+    await select({
+        message: "Metas abertas " + abertas.length,
+        choices:[
+            ...abertas
+        ]
+    })
+
+}
+
 
 const start = async () => {
     while (true) {
@@ -85,13 +105,19 @@ const start = async () => {
                     value: "realizadas"
                 },
                 {
+                    name: "Metas abertas",
+                    value: "abertas"
+                },
+                {
                     name: "Sair",
                     value: "sair"
                 }
             ]
         })
 
-// OPÇÕES PARA ACESSAR O APLICATIVO. CADASTRO DE METAS, LISTA DE METAS E CASO QUEIRA IRA SAIR DO APLICATIVO:
+// ESCOLHAS PARA ACESSAR FUNÇÃO DENTRO DO APLICATIVO:
+//  CADASTRO DE METAS, LISTA DE METAS, METAS REALIZADAS,
+//  METAS ABERTAS E CASO QUEIRA SAIR DO APLICATIVO:
         switch(opcao){
             case "cadastrar":
                 await cadastrarMeta()
@@ -103,7 +129,10 @@ const start = async () => {
                 break
             case "realizadas":
                 await metasRealizadas()
-                break 
+                break
+            case "abertas":
+                await metasAbertas()
+                break
             console.log('');
             case "sair":
                 console.log("Ate a proxima.")
